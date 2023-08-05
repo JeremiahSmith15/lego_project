@@ -154,12 +154,12 @@ def get_all_sets(theme):
                            elif set_info_keys[i].string == "Minifigs":
                                #There are two different sets of information with this label
                                if set_info_values[i].attrs == {}:
-                                   set_info["num_minifigs"] = set_info_values[i].string
+                                   set_info["num_minifigs"] = set_info_values[i].text
                                else:
                                    for code in set_info_values[i].find_all('a'):
                                        set_info["minifig_codes"].append(code.string)
                            elif set_info_keys[i].string == "RRP":
-                               set_info["retail_price"] = set_info_values[i].string
+                               set_info["retail_price"] = set_info_values[i].text
                            elif set_info_keys[i].string == "PPP":
                                set_info["price_per_piece"] = set_info_values[i].string
                            elif set_info_keys[i].string == "Packaging":
@@ -224,5 +224,5 @@ def get_all_sets(theme):
        
    set_data.to_csv(theme + "_lego_sets")
        
-#get_all_sets("Star-Wars")
-get_all_sets("City")
+get_all_sets("Star-Wars")
+#get_all_sets("City")
