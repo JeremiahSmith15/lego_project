@@ -29,6 +29,7 @@ The data scraped contained the following features for each of the 903 star wars 
 - packaging
 - instructions
 - additional_images
+- designer
 - launch_exit (the range of dates when the lego was produced)
 - current_value_new
 - current_value_used
